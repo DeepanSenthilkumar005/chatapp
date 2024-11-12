@@ -62,7 +62,7 @@ function ChatPage() {
             </>
           ))}
         </main>
-        <footer className="bg-white p-4 relative flex space-x-2">
+        <footer className="bg-white bottom-0 sticky p-4 relative flex space-x-2">
           <input 
             type="text" 
             value={inputMessage}  

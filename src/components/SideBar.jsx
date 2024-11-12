@@ -2,9 +2,9 @@ import React from 'react';
 
 function Sidebar() {
   return (
-    <aside className="md:w-1/4 md:flex sm:hidden bg-gray-200 p-4">
+    <aside className="md:w-1/4 stm:hidden bg-gray-200 p-4">
       <div>
-        <h2 className="text-xl font-semibold mb-4">Chats</h2>
+        <h2 className="text-xl font-semibold mb-4">Chats</h2> 
         <input type="text" className="p-2 my-2 rounded-md w-full space-y-2" placeholder='Search Emoji' />
         <ul className="space-y-2">
             <li className='text-xl font-semibold'>Pinned</li>
