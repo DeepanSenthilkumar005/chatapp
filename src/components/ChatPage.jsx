@@ -10,6 +10,7 @@ function ChatPage() {
   const sentIcon='https://cdn-icons-png.flaticon.com/512/3161/3161392.png';
 
   const [messages, setMessages] = useState([]);
+  const [showList, setShowList] = useState(false);
   const [inputMessage, setInputMessage] = useState('');
 
   const sendMessage = () => {
@@ -39,7 +40,7 @@ function ChatPage() {
               <h1 className="text-2xl ms-3 text-black">People 1</h1> 
             </div>
             <div className='my-auto ms-8'>
-              <ul className='flex gap-3 text-gray-400'>
+              <ul className='md:flex stm:hidden gap-3 text-gray-400'>
                 <li className='hover:cursor-pointer hover:scale-110 duration-200 hover:text-gray-600 hover:underline'>Chat</li>
                 <li className='hover:cursor-pointer hover:scale-110 duration-200 hover:text-gray-600 hover:underline'>Files</li>
                 <li className='hover:cursor-pointer hover:scale-110 duration-200 hover:text-gray-600 hover:underline'>Media</li>
@@ -57,7 +58,7 @@ function ChatPage() {
             </ul>
           </div>
         </header>
-        <main className="flex flex-col flex-1 overflow-y-auto p-4 no-scrollbar space-y-4 bg-gray-100">
+        <main className="flex flex-col flex-1 overflow-y-auto p-4 no-scrollbar space-y-4 bg-white">
           {messages.map((message, index) => (
             <div key={index} className={`flex ${message.sender === 'user' ? 'justify-end stm:ms-3 md:ms-6' : 'justify-start stm:me-3 md:me-6'}`}>
               <img 

@@ -3,7 +3,7 @@ import React from 'react';
 function Sidebar() {
   const searchIcon = 'https://cdn-icons-png.flaticon.com/512/11741/11741045.png'
   return (
-    <aside className="md:w-1/4 stm:hidden bg-gray-200 p-4">
+    <aside className="md:w-1/4 stm:hidden bg-gray-100 p-4">
       <div>
         <h2 className="text-xl font-semibold mb-4">Chats</h2> 
         <div className="relative">
