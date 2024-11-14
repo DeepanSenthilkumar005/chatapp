@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import Sidebar from './SideBar'; 
+import NavBar from './NavBar';
+import { IoMicOutline } from "react-icons/io5";
+import { BsEmojiSmile } from "react-icons/bs";
+import { AiOutlinePaperClip } from 'react-icons/ai';
 
 function ChatPage() {
   const userIcon='https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
@@ -8,6 +12,9 @@ function ChatPage() {
   const videoIcon='https://cdn-icons-png.flaticon.com/512/5346/5346453.png';
   const menuIcon='https://cdn-icons-png.flaticon.com/512/7794/7794505.png';
   const sentIcon='https://cdn-icons-png.flaticon.com/512/3161/3161392.png';
+  const micIcon=<IoMicOutline />;
+  const pinIcon=<AiOutlinePaperClip />;
+  const emojiIcon=<BsEmojiSmile />;
 
   const [messages, setMessages] = useState([]);
   const [showList, setShowList] = useState(false);
@@ -31,6 +38,7 @@ function ChatPage() {
 
   return (
     <div className="flex h-screen">
+      <NavBar />
       <Sidebar />
       <div className="flex flex-col flex-1">
         <header className="text-white flex p-3 justify-between py-4">
@@ -77,20 +85,37 @@ function ChatPage() {
           ))}
         </main>
         <footer className="bg-white bottom-0 p-4 relative flex space-x-2">
+        <button 
+            onClick={sendMessage}
+            className="bg-transparent absolute left-9 mt-0.5 text-white p-2 rounded-full"
+          >
+            <span className='text-black'>
+              {emojiIcon}
+            </span>
+          </button>
+          <button 
+            onClick={sendMessage}
+            className="bg-transparent absolute left-16 mt-0.5 text-white p-2 rounded-full"
+          >
+            <span className='text-black'>
+              {pinIcon}
+            </span>
+          </button>
           <input 
             type="text" 
             value={inputMessage}  
             onChange={(e) => setInputMessage(e.target.value)}  
             onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
-            placeholder="Type a message" 
-            className="flex-1 w-full p-2 px-4 border rounded-2xl"
+            placeholder="                Type a message" 
+            className="flex-1 px- w-full p-2 px-4 border rounded-2xl"
           />
           <button 
             onClick={sendMessage}
-            className="bg-blue-500 absolute right-6 mt-0.5 text-white p-2 rounded-full"
+            className="bg-teal-700 absolute right-6 mt-0.5 text-white p-2 rounded-full"
           >
             <span>
-              <img className='aspect-square w-5' src={sentIcon} alt="senticon" />
+              {/* <img className='aspect-square w-5' src={sentIcon} alt="senticon" /> */}
+              {micIcon}
             </span>
           </button>
         </footer>
