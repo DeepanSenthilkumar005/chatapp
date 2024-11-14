@@ -40,7 +40,7 @@ function ChatPage() {
     <div className="flex h-screen">
       <NavBar />
       <Sidebar />
-      <div className="flex flex-col flex-1">
+      <div className="flex ms-10 flex-col flex-1">
         <header className="text-white flex p-3 justify-between py-4">
           <div className="leftheader flex justify-between gap-1">
             <div className='flex'>

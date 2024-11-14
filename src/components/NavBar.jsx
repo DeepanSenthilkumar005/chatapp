@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <>
       <div 
-        className={`h-screen flex bg-white shadow-md transition-all duration-700 ease-in-out`} 
+        className={`h-screen stm:fixed z-50 flex bg-white shadow-md transition-all duration-500 ease-in-out`} 
         style={{ width: show ? '40px' : '150px' }}
       >
         <ul className='space-y-4 font-extrabold mt-3 p-2 mx-auto'>
